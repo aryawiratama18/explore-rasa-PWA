@@ -1,0 +1,114 @@
+@media screen and (max-width: 330px) {
+    .hero-image{
+        top: 0;
+        max-height: 350px;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .app-bar .app-bar-header img{
+        display: none;
+    }
+
+    .app-bar .app-bar-header h1{
+        display: inline-block;
+        margin: auto;
+    }
+
+    .hero-image{
+        top: 0;
+        max-height: 200px;
+        z-index: -1;
+    }
+
+    .hero-inner{
+        position: absolute;
+        top: 5em;
+    }
+
+    .hero-title{
+        font-size: 1.5em;
+    }
+
+    .hero-quote{
+        font-size: 1em;
+    }
+
+    footer p{
+        font-size: 0.7em;
+    }
+}
+
+
+@media screen and (min-width: 650px) {
+    .app-bar{
+        grid-template-columns: 1fr auto;
+        padding: 8px 32px;
+    }
+
+    .app-bar .nav-menu{
+        display: none;
+    }
+
+    .app-bar .app-navigator{
+        position: relative;
+        top: unset;
+        left: unset;
+        margin: auto;
+        align-content: center;
+        width: 100%;
+    }
+
+    .app-bar .app-bar-header img{
+        position: relative;
+        background-color: transparent;
+        width: 50%;
+    }
+
+    .app-bar .app-navigator ul li{
+        display: inline-block;
+    }
+
+    .app-bar .app-navigator ul li a{
+        display: inline-block;
+        width: 120px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .hero-image{
+        position: absolute;
+        max-height: 350px;
+        z-index: -1;
+    }
+
+    .hero-inner{
+        position: absolute;
+        top: 10em;
+    }
+
+    .hero-title{
+        font-size: 2em;
+    }
+
+    .hero-quote{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .app-bar .app-bar-header img{
+        position: relative;
+        background-color: transparent;
+        width: 30%;
+    }
+
+    .hero-image{
+        min-height: 375px;
+    }
+    .hero-inner{
+        position: absolute;
+        top: 10em;
+    }
+}

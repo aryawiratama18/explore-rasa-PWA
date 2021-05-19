@@ -1,0 +1,205 @@
+:root{
+    --vermilion: #E3170A;
+    --pale-silver: #D6CBC1;
+    --timberwolf: #CDD6D0;
+    --flame: #E16036;
+    --tumbleweed: #D6A99A;
+
+    --transition-anim: all .4s ease;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins',monospace;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.skip-button{
+    position: absolute;
+    top: -40px;
+    width: 250px;
+    left: 0;
+    background-color: var(--pale-silver);
+    color: var(--vermilion);
+    padding: 5px;
+    z-index: 100;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skip-button:focus{
+    top: 0px;
+}
+
+/* App Bar */
+.app-bar{
+    padding: 8px 16px;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.app-bar .nav-menu{
+    display: flex;
+    align-items: center;
+}
+
+.app-bar .nav-menu button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.app-bar .app-bar-header{
+    display: flex;
+    align-items: center;
+}
+
+.app-bar .app-bar-header img{
+    position: relative;
+    background-color: transparent;
+    width: 30%;
+}
+.app-bar .app-bar-header h1{
+    display: none;
+    font-family: 'DAGGERSQUARE';
+    background-color: transparent;
+    color: var(--vermilion);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.app-bar .app-navigator{
+    position: absolute;
+    top: 50px;
+    left: -180px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 8px;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.app-bar .app-navigator .navigator-list{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.app-bar .app-navigator.open{
+    left: 0;
+}
+
+.app-bar .app-navigator ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.search-button{
+    background: transparent;
+    border: none;
+}
+
+.search-button:hover{
+    cursor: pointer;
+}
+
+.search-button:active{
+    background: none;
+    border: none;
+    box-shadow: 3px 2px 5px var(--tumbleweed);
+    transform: var(--transition-anim);
+}
+
+.search-field{
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--vermilion);
+}
+
+.search-field:focus{
+    outline: none;
+}
+
+
+/* Jumbotron */
+.hero{
+    display: flex;
+    /* min-height: 350px; */
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.hero-image{
+   position: absolute;
+   width: 100%;
+   opacity: 20%;
+   top: 0;
+   height: auto;
+   z-index: -1;
+}
+
+.hero-inner{
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.hero-title{
+    color: black;
+    font-weight: bold;
+    font-size: 3em;
+    text-shadow: 3px 3px 10px var(--vermilion);
+    text-transform: uppercase;
+    z-index: 20;
+}
+
+.hero-quote{
+    margin-top: 30;
+    color: black;
+    font-weight: 500;
+    font-family:'URW Chancery L',cursive;
+    font-size: 2em;
+    text-shadow: 3px 3px 10px var(--vermilion);
+}
+
+/* Main Content */
+
+main{
+    padding: 32px;
+    flex: 1;
+}
+
+.content{
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+
+/* Footer */
+footer{
+    padding: 14px;
+}
+
+footer p{
+    text-align: center;
+    color: var(--vermilion);
+}
