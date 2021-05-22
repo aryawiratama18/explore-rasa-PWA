@@ -6,7 +6,8 @@
     }
 }
 
-@media screen and (max-width: 620px) {
+
+@media screen and (max-width: 649px) {
     .app-bar .app-bar-header img{
         display: none;
     }
@@ -14,6 +15,12 @@
     .app-bar .app-bar-header h1{
         display: inline-block;
         margin: auto;
+    }
+
+    .app-bar .app-navigator{
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
     }
 
     .hero-image{
@@ -25,6 +32,9 @@
     .hero-inner{
         position: absolute;
         top: 5em;
+        left: 2em;
+        right: 2em;
+        /* margin: 30px; */
     }
 
     .hero-title{
@@ -37,6 +47,13 @@
 
     footer p{
         font-size: 0.7em;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .restaurants{
+        grid-template-columns: repeat(2,1fr);
+        gap: 14px;
     }
 }
 
@@ -63,7 +80,7 @@
     .app-bar .app-bar-header img{
         position: relative;
         background-color: transparent;
-        width: 50%;
+        width: 10em;
     }
 
     .app-bar .app-navigator ul li{
@@ -78,7 +95,6 @@
     }
 
     .hero-image{
-        position: absolute;
         max-height: 350px;
         z-index: -1;
     }
@@ -86,6 +102,8 @@
     .hero-inner{
         position: absolute;
         top: 10em;
+        right: 3em;
+        left: 3em;
     }
 
     .hero-title{
@@ -95,20 +113,46 @@
     .hero-quote{
         font-size: 1.5em;
     }
+
+    .restaurants{
+        grid-template-columns: repeat(3,1fr);
+        gap: 14px;
+    }
+}
+
+@media screen and (min-width: 755px) {
+    .app-bar .app-bar-header img{
+        width: 12em;
+    }
 }
 
 @media screen and (min-width: 800px) {
     .app-bar .app-bar-header img{
         position: relative;
         background-color: transparent;
-        width: 30%;
+        width: 15em;
     }
 
     .hero-image{
         min-height: 375px;
     }
+
     .hero-inner{
         position: absolute;
         top: 10em;
+        left: 3em;
+        right: 3em;
+    }
+
+    .restaurants{
+        grid-template-columns: repeat(4,1fr);
+        gap: 14px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .restaurants{
+        grid-template-columns: repeat(5,1fr);
+        gap: 14px;
     }
 }

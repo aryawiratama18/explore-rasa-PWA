@@ -23,9 +23,19 @@ const restaurantDetailTemplate = (restaurant) => `
 `;
 
 const restaurantListTemplate = (restaurant) => `
-  <div class="__restaurantList">
-    <div class="__restaurantListHeader">
-      <p>⭐️<span class="__restaurantListRating>${restaurant.rating}</span></p>
+  <div class="__restaurantItem">
+    <div class="__restaurantItemHeader">
+      <img class="__restaurantImagePoster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
+      <div class="__restaurantItemRating">
+        <p>⭐️<span class="__restaurantItemScore">${restaurant.rating}</span></p>
+      </div>
+    </div>
+    <div class="__restaurantItemSummary">
+    <h3>${restaurant.name}</h3>
+    <p>${restaurant.description}</p>
+    </div>
+    <div class="__readMoreButton">
+      <a href="${`/#/detail/${restaurant.id}`}">Read More</a>
     </div>
   </div>
 `;
