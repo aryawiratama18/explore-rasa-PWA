@@ -103,16 +103,6 @@ body{
     left: 0;
 }
 
-/* .app-bar .app-navigator ul li a{
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    padding: 8px;
-    margin-bottom: 5px;
-    width: 100%;
-    opacity: 0.75;
-} */
-
 .app-bar .app-navigator ul li input{
     display: inline-block;
     padding: 8px;
@@ -242,7 +232,7 @@ main{
     margin: 32px 0;
 }
 
-/* Restaurant */
+/* Restaurant Item */
 
 .__restaurantItem{
     width: 100%;
@@ -336,6 +326,117 @@ main{
     right: 0;
     opacity: 1;
 }
+
+/* Restaurant */
+.restaurant{
+    padding: 0 auto;
+}
+
+
+.__restaurantDetail{
+    margin: 10px auto;
+    width: 100%;
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px 14px;
+}
+
+.__restaurantDetailDesc p{
+    text-align: justify;
+}
+
+.__restaurantDetailMenus{
+    margin: 10px auto;
+    width: 100%;
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px 14px;
+}
+
+.__restaurantDetailName{
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 1.8em;
+    text-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    color: var(--vermilion);
+}
+
+.__restaurantDetailImage{
+    width: 100%;
+    max-width: 400px;
+}
+
+.__restaurantDetailInfo h4{
+    margin: 10px 0;
+}
+
+.__restaurantDetailMenus h3{
+    text-align: center;
+    font-size: 1.8em;
+    text-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    color: var(--vermilion);
+}
+
+.__restaurantFoods{
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px rgba(0,0,0,0.2);
+}
+
+.__restaurantFoods .food-list{
+    list-style-type: none;
+}
+
+.__restaurantDrinks{
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px rgba(0,0,0,0.2);
+}
+
+.__restaurantDrinks .drink-list{
+    list-style-type: none;
+}
+
+/* Save Button */
+
+.save{
+    font-size: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--vermilion);
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.saved{
+    font-size: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--vermilion);
+    color: yellow;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 /* Footer */

@@ -37,6 +37,10 @@
         font-size: 1em;
     }
 
+    .restaurant{
+        margin: 10px;
+    }
+
     footer p{
         font-size: 0.7em;
     }
@@ -104,6 +108,43 @@
     .restaurants{
         grid-template-columns: repeat(3,1fr);
         gap: 14px;
+    }
+
+    .__restaurantDetail{
+        grid-template-columns: auto 1fr;
+    }
+
+    .__restaurantDetailName{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .__restaurantDetailDesc{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .__restaurantDetailDesc p{
+        text-align: justify;
+    }
+
+    .__restaurantDetailMenus{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .__restaurantDetailMenus h3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .__restaurantFoods{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .__restaurantDrinks{
+        grid-column-start: 2;
+        grid-column-end: 3;
     }
 }
 

@@ -1,25 +1,57 @@
 import CONFIG from '../../global/config';
 
+const restaurantMenuTemplate = (foods, drinks) => `
+  <h3>Our Menus</h3>
+  <div class="__restaurantFoods">
+  <h3>Foods</h3>
+    <ul class="food-list">
+      ${foods.map((food) => `<li>${food.name}</li>`).join('')}
+    </ul>
+  </div>
+  <div class="__restaurantDrinks">
+  <h3>Drinks</h3>
+    <ul class="drink-list">
+      ${drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
+    </ul>
+  </div>
+`;
+
+const restaurantReviews = (reviews) => `
+  <h3>Customer Review</h3>
+  <div class="__restaurantReviews">
+    ${reviews.map((review) => `
+      <h4>"${review.review}"</h4>
+      <h5>${review.name}</h5>
+      <p>${review.date}</p>
+    `).join('')}
+  </div>
+`;
+
 const restaurantDetailTemplate = (restaurant) => `
     <div class="__restaurantDetail">
       <h2 class="__restaurantDetailName">${restaurant.name}</h2>
       <img class="__restaurantDetailImage" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
       <div class="__restaurantDetailInfo">
-        <h3>Restaurant Information</h3>
+        <h4>Restaurant Information</h4>
         <h4>Address</h4>
         <p>${restaurant.address}</p>
         <p>${restaurant.city}</p>
         <h4>Rating</h4>
-        <p>${restaurant.rating}</p>
+        <p>${restaurant.rating} / 5.0</p>
+      </div>
+      <div class="__restaurantDetailDesc">
         <h4>Description</h4>
         <p>${restaurant.description}</p>
       </div> 
-      <div class="__restaurantDetailMenus">
-        <div class="__restaurantFoods" id="restaurantFoods"/>
-        <div class="__restaurantDrinks" id="restaurantDrinks"/>
       </div>
-      <div class="__restaurantDetailReview"/>
-    </div>
+      <div class="__restaurantDetailMenus">
+        ${restaurant.menus ? restaurantMenuTemplate(restaurant.menus.foods, restaurant.menus.drinks) : ''}
+      </div>
+      <div class="__restaurantDetailReviewBox">
+      </div>
+      <div class="__restaurantDetailReview">
+        ${restaurant.customerReviews ? restaurantReviews(restaurant.customerReviews) : ''}
+      </div>
 `;
 
 const restaurantListTemplate = (restaurant) => `
@@ -40,7 +72,20 @@ const restaurantListTemplate = (restaurant) => `
   </div>
 `;
 
+const saveButtonTemplate = () => `
+  <button aria-label="save this restaurant" id="saveButton" class="save">
+    <i class="fa fa-star-o"></i>
+  </button>
+`;
+
+const savedButtonTemplate = () => `
+  <button aria-label="remove from saved" id="saveButton" class="saved">
+    <i class="fa fa-star"></i>
+  </button>
+`;
 export {
   restaurantDetailTemplate,
   restaurantListTemplate,
+  saveButtonTemplate,
+  savedButtonTemplate,
 };
