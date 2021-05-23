@@ -103,20 +103,49 @@ body{
     left: 0;
 }
 
-.app-bar .app-navigator ul li a{
+/* .app-bar .app-navigator ul li a{
     display: inline-block;
     text-decoration: none;
     color: black;
     padding: 8px;
     margin-bottom: 5px;
     width: 100%;
-}
+    opacity: 0.75;
+} */
 
 .app-bar .app-navigator ul li input{
     display: inline-block;
     padding: 8px;
     margin-bottom: 5px;
     width: 74%;
+}
+
+.nav-link{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    opacity: 0.75;
+}
+
+.nav-link:hover{
+    opacity: 1;
+}
+
+.nav-link::before{
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: var(--vermilion);
+    width: 0%;
+    bottom: 10px;
+}
+
+.nav-link:hover::before{
+    width: 5%;
 }
 
 .search-button{
@@ -150,10 +179,10 @@ body{
 .hero{
     display: block;
     width: 100%;
+    min-height: 350px;
     text-align: center;
     justify-content: center;
-    background-image: url("../../images/hero/hero-image.jpg");
-    background-position: center;
+    background: url("./images/heros/hero-image.jpg") no-repeat fixed center;
 }
 
 .hero-image{
@@ -171,7 +200,7 @@ body{
 }
 
 .hero-title{
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 3em;
     text-shadow: 3px 3px 10px var(--vermilion);
@@ -181,9 +210,9 @@ body{
 
 .hero-quote{
     margin-top: 30;
-    color: black;
-    font-weight: 500;
-    font-family:'URW Chancery L',cursive;
+    color: white;
+    font-weight: bold;
+    font-family: Lucida Calligraphy;
     font-size: 2em;
     text-shadow: 3px 3px 10px var(--vermilion);
 }
@@ -191,7 +220,7 @@ body{
 /* Main Content */
 
 main{
-    padding: 32px 200px;
+    padding: 32px 0;
     flex: 1;
 }
 
@@ -228,6 +257,7 @@ main{
 
 .__restaurantImagePoster{
     width: 100%;
+    max-height: 124px;
 }
 
 .__restaurantItemRating{
@@ -254,6 +284,7 @@ main{
     margin: 0 0 10px 0;
     color: var(--vermilion);
     text-decoration: none;
+    font-size: 1em;
 }
 
 .__restaurantItemSummary p{
