@@ -1,4 +1,5 @@
 import ENDPOINT from '../global/api-endpoint';
+import CONFIG from '../global/config';
 
 class RestaurantDataSource {
   static async restaurantList() {
@@ -17,6 +18,18 @@ class RestaurantDataSource {
     const response = await fetch(ENDPOINT.SEARCH(query));
     const responseJson = await response.json();
     return responseJson.restaurants;
+  }
+
+  static async sendReview(review) {
+    const response = await fetch(ENDPOINT.REVIEW, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Auth-Token': CONFIG.KEY,
+      },
+      body: JSON.stringify(review),
+    });
+    console.log(response);
   }
 }
 

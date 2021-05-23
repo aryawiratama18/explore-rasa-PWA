@@ -1,6 +1,7 @@
 import RestaurantDataSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
 import SaveButtonInitiator from '../../utils/save-button-initiator';
+import AddReviewInitiator from '../../utils/add-review-initiator';
 import { restaurantDetailTemplate } from '../templates/template-creator';
 
 const RestaurantDetail = {
@@ -29,6 +30,13 @@ const RestaurantDetail = {
         menus: restaurant.menus,
         rating: restaurant.rating,
       },
+    });
+
+    AddReviewInitiator.init({
+      restaurantId: restaurant.id,
+      name: document.querySelector('#nameField').textContent,
+      review: document.querySelector('#reviewField').textContent,
+      postButton: document.querySelector('#postReview'),
     });
   },
 };

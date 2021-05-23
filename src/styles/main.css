@@ -6,6 +6,8 @@
     --tumbleweed: #D6A99A;
 
     --transition-anim: all .4s ease;
+    --box-shadow-val: 2px 3px 10px rgba(0,0,0,0.2);
+    --text-shadow-val:  0 4px 5px rgba(0,0,0,0.2);
 }
 
 *{
@@ -236,7 +238,7 @@ main{
 
 .__restaurantItem{
     width: 100%;
-    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.3);
+    box-shadow: var(--box-shadow-val);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -256,7 +258,7 @@ main{
     top: 20px;
     right: 0;
     border-radius: 10px 0 0 10px;
-    box-shadow: 1px 3px 5px 0 rgba(0,0,0,0.3);
+    box-shadow: var(--box-shadow-val);
     display: inline-block;
     background-color: var(--vermilion);
     color: var(--timberwolf);
@@ -359,7 +361,7 @@ main{
     text-align: center;
     font-family: 'Poppins';
     font-size: 1.8em;
-    text-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    text-shadow: var(--text-shadow-val);
     color: var(--vermilion);
 }
 
@@ -375,7 +377,7 @@ main{
 .__restaurantDetailMenus h3{
     text-align: center;
     font-size: 1.8em;
-    text-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    text-shadow: var(--text-shadow-val);
     color: var(--vermilion);
 }
 
@@ -383,7 +385,7 @@ main{
     text-align: center;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 2px 3px 10px rgba(0,0,0,0.2);
+    box-shadow: var(--box-shadow-val);
 }
 
 .__restaurantFoods .food-list{
@@ -394,11 +396,39 @@ main{
     text-align: center;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 2px 3px 10px rgba(0,0,0,0.2);
+    box-shadow: var(--box-shadow-val);
 }
 
 .__restaurantDrinks .drink-list{
     list-style-type: none;
+}
+
+.__restaurantDetailReview h3{
+    text-align: center;
+    text-shadow: var(--text-shadow-val);
+    color: var(--vermilion);
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+.__restaurantReviews{
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-val);
+    text-align: center;
+    padding: 10px;
+}
+
+.__review{
+    box-shadow: var(--box-shadow-val);
+    margin: 10px;
+}
+
+.__review h4{
+    margin: 20px auto 15px auto;
+}
+
+.__review h5{
+    opacity: 75%;
 }
 
 /* Save Button */
@@ -437,6 +467,19 @@ main{
     justify-content: center;
 }
 
+/* Post Review Button */
+.post{
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding: 2px;
+    width: 100px;
+    height: 70px;
+    border: none;
+    background-color: var(--vermilion);
+}
 
 
 /* Footer */

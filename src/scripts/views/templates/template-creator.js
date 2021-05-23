@@ -20,9 +20,10 @@ const restaurantReviews = (reviews) => `
   <h3>Customer Review</h3>
   <div class="__restaurantReviews">
     ${reviews.map((review) => `
+    <div class="__review">
       <h4>"${review.review}"</h4>
-      <h5>${review.name}</h5>
-      <p>${review.date}</p>
+      <h5>${review.name} (${review.date})</h5>
+    </div>
     `).join('')}
   </div>
 `;
@@ -48,6 +49,18 @@ const restaurantDetailTemplate = (restaurant) => `
         ${restaurant.menus ? restaurantMenuTemplate(restaurant.menus.foods, restaurant.menus.drinks) : ''}
       </div>
       <div class="__restaurantDetailReviewBox">
+        <h3>What do you think?</h3>
+        <div class="__reviewBox">
+          <form>
+            <label class="__custNameLabel" for="nameField">Name: </label>
+            <input type="text" id="nameField" required>
+            <br>
+            <label class="__custReviewLabel" for="reviewField">Review: </label>
+            <textarea id="reviewField" required></textarea>
+            <br>
+            <button aria-label="post this review" class="post" id="postReview">Post It !!</button>
+          </form>
+        </div>
       </div>
       <div class="__restaurantDetailReview">
         ${restaurant.customerReviews ? restaurantReviews(restaurant.customerReviews) : ''}
@@ -83,6 +96,7 @@ const savedButtonTemplate = () => `
     <i class="fa fa-star"></i>
   </button>
 `;
+
 export {
   restaurantDetailTemplate,
   restaurantListTemplate,

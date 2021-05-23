@@ -6,6 +6,7 @@ const CONFIG = {
   DATABASE_NAME: 'restaurant-db',
   DATABASE_VERSION: 1,
   OBJECT_STORE_NAME: 'fav-restaurant',
+  KEY: 12345,
 };
 
 export default CONFIG;
