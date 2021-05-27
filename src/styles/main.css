@@ -174,7 +174,7 @@ body{
     min-height: 350px;
     text-align: center;
     justify-content: center;
-    background: url("./images/heros/hero-image.jpg") no-repeat fixed center;
+    background: url("./images/hero/hero-image.jpg") no-repeat fixed center;
 }
 
 .hero-image{

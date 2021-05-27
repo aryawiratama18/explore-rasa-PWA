@@ -34,8 +34,6 @@ const RestaurantDetail = {
 
     AddReviewInitiator.init({
       restaurantId: restaurant.id,
-      name: document.querySelector('#nameField').textContent,
-      review: document.querySelector('#reviewField').textContent,
       postButton: document.querySelector('#postReview'),
     });
   },

@@ -1,28 +1,28 @@
-// import RestaurantDataSource from '../data/restaurant-source';
+import RestaurantDataSource from '../data/restaurant-source';
 
 const AddReviewInitiator = {
   async init({
-    restaurantId, name, review, postButton,
+    restaurantId, postButton,
   }) {
     this._restaurantId = restaurantId;
-    this._name = name;
-    this._review = review;
     this._postButton = postButton;
 
     await this._sendReview();
   },
 
   async _sendReview() {
-    const review = {
-      id: this._restaurantId,
-      name: this._name,
-      review: this._review,
-    };
     const postButton = this._postButton;
+    const nameField = document.querySelector('#nameField');
+    const reviewField = document.querySelector('#reviewField');
+
     postButton.addEventListener('click', async (event) => {
       event.preventDefault();
-      //   await RestaurantDataSource.sendReview(review);
-      console.log(review);
+      const review = {
+        id: this._restaurantId,
+        name: nameField.value,
+        review: reviewField.value,
+      };
+      await RestaurantDataSource.sendReview(review);
     });
   },
 };

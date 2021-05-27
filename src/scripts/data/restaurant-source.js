@@ -29,7 +29,8 @@ class RestaurantDataSource {
       },
       body: JSON.stringify(review),
     });
-    console.log(response);
+
+    return response;
   }
 }
 
