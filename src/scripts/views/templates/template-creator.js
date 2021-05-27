@@ -1,5 +1,11 @@
 import CONFIG from '../../global/config';
 
+const restaurantCategories = (categories) => `
+  <div class = "__categories">
+    ${categories.map((category) => `<span>${category.name}  </span>`).join('')}
+  </div>
+`;
+
 const restaurantMenuTemplate = (foods, drinks) => `
   <h3>Our Menus</h3>
   <div class="__restaurantFoods">
@@ -39,6 +45,8 @@ const restaurantDetailTemplate = (restaurant) => `
         <p>${restaurant.city}</p>
         <h4>Rating</h4>
         <p>${restaurant.rating} / 5.0</p>
+        <h4>Categories</h4> 
+        ${restaurant.categories ? restaurantCategories(restaurant.categories) : ''}
       </div>
       <div class="__restaurantDetailDesc">
         <h4>Description</h4>
@@ -52,13 +60,13 @@ const restaurantDetailTemplate = (restaurant) => `
         <h3>What do you think?</h3>
         <div class="__reviewBox">
           <form>
-            <label class="__custNameLabel" for="nameField">Name: </label>
-            <input type="text" id="nameField" required>
+            <label class="__custNameLabel" for="nameField">Name</label>
+            <input type="text" id="nameField" placeholder="Write your name here" required>
             <br>
-            <label class="__custReviewLabel" for="reviewField">Review: </label>
-            <textarea id="reviewField" required></textarea>
+            <label class="__custReviewLabel" for="reviewField">Review</label>
+            <textarea rows="10" id="reviewField" placeholder="Write your review..." required></textarea>
             <br>
-            <button aria-label="post this review" class="post" id="postReview">Post It !!</button>
+            <button aria-label="post this review" class="post" id="postReview">Submit</button>
           </form>
         </div>
       </div>
