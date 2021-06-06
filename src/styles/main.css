@@ -64,6 +64,8 @@ body{
     font-size: 20px;
     padding: 5px;
     cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .app-bar .app-bar-header{
@@ -120,6 +122,8 @@ body{
     margin-bottom: 5px;
     width: 100%;
     opacity: 0.75;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .nav-link:hover{
@@ -247,10 +251,13 @@ main{
 }
 
 .__restaurantItemSummary h3{
-    margin: 0 0 10px 0;
     color: var(--vermilion);
     text-decoration: none;
     font-size: 1em;
+}
+
+.__restaurantItemSummary h5{
+    margin-bottom : 10px;
 }
 
 .__restaurantItemSummary p{
@@ -267,7 +274,7 @@ main{
     background: white;
     text-align: center;
     text-transform: uppercase;
-    padding: 10px 15px;
+    padding: 0 10px;
     cursor: pointer;
     transition: var(--transition-anim);
     margin: 10px;
@@ -282,6 +289,8 @@ main{
     font-weight: bold;
     font-family: 'Poppins';
     color: var(--vermilion);
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .__readMoreButton a::after{

@@ -1,5 +1,5 @@
 import FavouriteRestaurant from '../../data/fav-restaurant-idb';
-import { restaurantListTemplate } from '../templates/template-creator';
+import { restaurantHomeTemplate } from '../templates/template-creator';
 
 const FavouritePage = {
   async render() {
@@ -16,7 +16,7 @@ const FavouritePage = {
     const restaurants = await FavouriteRestaurant.getAllRestaurant();
     const restaurantsContainer = document.querySelector('#restaurants');
     restaurants.forEach((restaurant) => {
-      restaurantsContainer.innerHTML += restaurantListTemplate(restaurant);
+      restaurantsContainer.innerHTML += restaurantHomeTemplate(restaurant);
     });
   },
 };

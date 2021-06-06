@@ -85,6 +85,7 @@ const restaurantHomeTemplate = (restaurant) => `
     </div>
     <div class="__restaurantItemSummary">
     <h3>${restaurant.name}</h3>
+    <h5>${restaurant.city}</h5>
     <p>${restaurant.description}</p>
     </div>
     <div class="__readMoreButton">
