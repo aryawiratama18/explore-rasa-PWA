@@ -1,7 +1,7 @@
 import RestaurantDataSource from '../../data/restaurant-source';
-import { restaurantListTemplate } from '../templates/template-creator';
+import { restaurantHomeTemplate } from '../templates/template-creator';
 
-const RestaurantList = {
+const RestaurantHome = {
   async render() {
     return `
         <div class="main-content">
@@ -16,9 +16,9 @@ const RestaurantList = {
     const restaurants = await RestaurantDataSource.restaurantList();
     const restaurantContainer = document.querySelector('#restaurants');
     restaurants.forEach((restaurant) => {
-      restaurantContainer.innerHTML += restaurantListTemplate(restaurant);
+      restaurantContainer.innerHTML += restaurantHomeTemplate(restaurant);
     });
   },
 };
 
-export default RestaurantList;
+export default RestaurantHome;

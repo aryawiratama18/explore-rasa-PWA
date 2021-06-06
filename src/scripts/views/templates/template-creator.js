@@ -75,7 +75,7 @@ const restaurantDetailTemplate = (restaurant) => `
       </div>
 `;
 
-const restaurantListTemplate = (restaurant) => `
+const restaurantHomeTemplate = (restaurant) => `
   <div class="__restaurantItem">
     <div class="__restaurantItemHeader">
       <img class="__restaurantImagePoster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}">
@@ -107,7 +107,7 @@ const savedButtonTemplate = () => `
 
 export {
   restaurantDetailTemplate,
-  restaurantListTemplate,
+  restaurantHomeTemplate,
   saveButtonTemplate,
   savedButtonTemplate,
 };
